@@ -12,5 +12,6 @@
 11) Lab 5 :- Text classification for Sentimental analysis using KNN. Note: Use twitter data.
 12) Lab 6 :- Case Study :- Sentiment Analysis via Reviews.
 13) The Project :- A big agentic capstone project. (RAG + MCP + AI Agents)
+14) agents :- a folder for the LangGraph project files - the leave management project
 
 Link to the blog : https://learnaimldswithsk.hashnode.dev/
