@@ -1,0 +1,66 @@
+# NASA RAG System - Evaluation Dataset
+# Format: QUESTION / REFERENCE blocks separated by blank lines.
+# Lines starting with # are comments and are ignored by the loader.
+# The loader reads alternating QUESTION: and REFERENCE: lines.
+# REFERENCE answers are used as gold standards for BLEU and ROUGE scoring.
+# ResponseRelevancy and Faithfulness run on every entry regardless.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Overview | MISSION: Apollo 11
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What was the primary objective of the Apollo 11 mission?
+REFERENCE: The primary objective of Apollo 11 was to land two astronauts on the lunar surface and return them safely to Earth, fulfilling the national goal set by President Kennedy in 1961.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Technical | MISSION: Apollo 13
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What type of rocket and spacecraft were used in the Apollo 13 mission?
+REFERENCE: Apollo 13 used the Saturn V rocket to launch a Command and Service Module along with a Lunar Module. The crew traveled in the Command Module Odyssey, and after the explosion, the Lunar Module Aquarius served as a lifeboat.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Emergency | MISSION: Apollo 13
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What caused the oxygen tank explosion on Apollo 13 and how did the crew respond?
+REFERENCE: An oxygen tank in the Service Module ruptured approximately 56 hours into the mission after a faulty thermostat caused wiring insulation to burn during a routine stir. The crew shut down the Command Module to conserve power and moved into the Lunar Module Aquarius, using it as a lifeboat for the return journey.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Disaster Analysis | MISSION: Challenger
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What were the technical and organizational factors identified as root causes of the Challenger disaster?
+REFERENCE: The Rogers Commission identified the primary technical cause as the failure of O-ring seals on the right solid rocket booster, which failed in cold temperatures and allowed hot gases to escape. Organizational factors included NASA management's decision to launch despite engineer objections from Morton Thiokol about O-ring performance below 53 degrees Fahrenheit.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Crew | MISSION: Apollo 11
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: Who were the crew members of Apollo 11 and what were their roles?
+REFERENCE: Apollo 11 crew consisted of Neil Armstrong as Commander who piloted the lunar module and became the first human to walk on the Moon, Buzz Aldrin as Lunar Module Pilot who accompanied Armstrong on the surface, and Michael Collins as Command Module Pilot who orbited the Moon while the others landed.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Timeline | MISSION: Apollo 11
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What were the key timeline milestones of the Apollo 11 moon landing?
+REFERENCE: Apollo 11 launched on July 16 1969, entered lunar orbit on July 19, and the lunar module Eagle landed in the Sea of Tranquility on July 20. Neil Armstrong stepped onto the surface at 10:56 PM EDT. The crew splashed down safely in the Pacific Ocean on July 24 1969.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Emergency | MISSION: Apollo 13
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: How did NASA Mission Control devise a plan to return the Apollo 13 crew safely after the explosion?
+REFERENCE: Mission Control devised a free-return trajectory using the Moon's gravity to sling the spacecraft back toward Earth. Engineers calculated a minimal power budget for the Lunar Module systems, improvised a carbon dioxide scrubber fix using available materials, and guided the crew through a precise engine burn to correct their reentry angle before they transferred back to the Command Module for splashdown.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Disaster Analysis | MISSION: Challenger
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: What role did the O-ring failure play in the Challenger Space Shuttle disaster?
+REFERENCE: The O-rings on the right solid rocket booster failed to seal properly in the cold temperature on the morning of January 28 1986. Hot combustion gases escaped through the joint, burned through the external tank, and caused a structural breakup of the vehicle 73 seconds after launch, destroying Challenger and killing all seven crew members.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Crew | MISSION: Challenger
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: Who were the seven crew members aboard Challenger and what made this mission historically significant?
+REFERENCE: The Challenger crew were Francis Scobee (Commander), Michael Smith (Pilot), mission specialists Judith Resnik, Ellison Onizuka, and Ronald McNair, payload specialist Gregory Jarvis, and Christa McAuliffe. The mission was historically significant because McAuliffe was selected through NASA's Teacher in Space program and would have been the first civilian teacher to fly in space.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATEGORY: Technical | MISSION: Apollo 11
+# ─────────────────────────────────────────────────────────────────────────────
+QUESTION: How did the Apollo 11 lunar module Eagle perform during the descent and landing?
+REFERENCE: During powered descent the navigation computer triggered several 1202 program alarms caused by executive overflow, but flight controllers cleared the crew to continue. Armstrong took manual control in the final minutes to avoid a boulder-strewn crater and landed Eagle in the Sea of Tranquility with roughly 25 seconds of fuel remaining.
