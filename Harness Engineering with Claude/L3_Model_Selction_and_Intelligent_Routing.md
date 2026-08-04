@@ -91,3 +91,39 @@ The comparison table — makes the tradeoff concrete rather than theoretical. Yo
 The "fail safe toward more analysis" comment in route_alert — a small but important harness design choice: if the classifier ever returns something unexpected, the router defaults to the most careful path (Opus) rather than the cheapest one. In safety-relevant systems, your fallback behavior should always err toward more scrutiny, not less.
 
 One thing worth actually experimenting with once you have it running: change SEVERE_ALERT's wording slightly and rerun the classifier a few times. You'll likely see Haiku's classification is very consistent for clear-cut cases but can wobble on borderline ones — which is itself a good discussion point for Lesson 4 onward, when the course gets into verification and control systems for exactly this kind of uncertainty.
+
+-----
+
+Refer the file (1_WeatherModelRouting.py) for code exercise
+
+The Definition, Mapped to Code
+
+"A technique where incoming tasks are automatically directed to the most appropriate AI model based on the task's complexity, optimizing for cost, speed, and performance."
+
+
+| Part of the definition | Where it lives in the code |
+| :--- | :--- |
+| **Incoming tasks** | The `alert_text` argument passed into `route_alert()` — this is the unit of work arriving into the system |
+| **Automatically directed** | The `if`/`elif`/`else` block inside `route_alert()` — no human decides which model handles this; the code decides |
+| **Based on the task's complexity** | The `severity` value produced by `classify_alert_haiku()` — complexity is measured first, then used as the routing signal |
+| **Most appropriate AI model** | The dispatch to `generate_notification_haiku`, `generate_detailed_summary_sonnet`, or `analyze_severe_threat_opus` |
+| **Optimizing for cost, speed, performance** | The comparison table in Part 2 — that's the empirical proof the routing choice was worth it |
+
+
+Walking Through the Actual Flow
+```python
+def route_alert(alert_text: str) -> dict:
+    classification = classify_alert_haiku(alert_text)   # step 1: measure complexity (cheap)
+    severity = classification["text"]
+
+    if severity == "simple":
+        result = generate_notification_haiku(alert_text)      # cheapest, fastest
+    elif severity == "moderate":
+        result = generate_detailed_summary_sonnet(alert_text) # balanced
+    else:
+        result = analyze_severe_threat_opus(alert_text)       # most capable, most expensive
+```
+This is smart routing in its most literal form: a classifier stage (Haiku, doing triage) feeding into a dispatch stage (choosing which model actually does the real work). Two things make it "smart" rather than just conditional logic:
+
+The classifier itself is cheap. You're not burning your expensive model's budget just to decide who should handle the task — that would defeat the purpose. Haiku classifying costs roughly $0.0001 per call versus tens of times that if Opus did the deciding.
+The fallback direction is deliberate. If the classifier returns something unexpected, the else branch routes to Opus (the most careful option) rather than Haiku (the cheapest). Smart routing isn't just "pick the cheapest model that might work" — it's routing toward safety margin when uncertain.
