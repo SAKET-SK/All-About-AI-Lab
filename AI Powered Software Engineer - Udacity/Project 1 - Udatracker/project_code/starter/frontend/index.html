@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="p-4 bg-gray-100 flex justify-center">
+    <div class="container mx-auto p-6 bg-white shadow-xl rounded-2xl">
+        <h1 class="text-4xl font-bold text-center text-indigo-700 mb-8">Order Management System</h1>
+        <div id="message-container" class="message-box hidden"></div>
+        <div class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Add New Order</h2>
+            <form id="add-order-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="order_id" required placeholder="Order ID" class="input-style">
+                <input type="text" name="item_name" required placeholder="Item Name" class="input-style">
+                <input type="number" name="quantity" required min="1" placeholder="Quantity" class="input-style">
+                <input type="text" name="customer_id" required placeholder="Customer ID" class="input-style">
+                <div class="md:col-span-2"><button type="submit" class="btn-primary">Add Order</button></div>
+            </form>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">Get Order Details</h2>
+                <form id="get-order-form" class="flex gap-4 mb-4">
+                    <input type="text" id="get-order-id" placeholder="Enter Order ID" required class="input-style flex-grow">
+                    <button type="submit" class="btn-secondary">Get Order</button>
+                </form>
+                <div id="single-order-details" class="bg-gray-50 p-4 rounded-md hidden"><pre></pre></div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">Update Order Status</h2>
+                <form id="update-status-form" class="flex gap-4">
+                    <input type="text" id="update-order-id" placeholder="Order ID" required class="input-style">
+                    <select id="update-new-status" required class="input-style">
+                        <option value="">Select Status</option>
+                        <option value="pending">Pending</option><option value="processing">Processing</option><option value="shipped">Shipped</option>
+                    </select>
+                    <button type="submit" class="btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+        <div class="card p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold">All Orders</h2>
+                <div>
+                    <button id="list-all-orders-btn" class="btn-secondary">Refresh</button>
+                    <select id="filter-status" class="input-style inline-block w-auto">
+                        <option value="">Filter by Status</option>
+                        <option value="pending">Pending</option><option value="processing">Processing</option><option value="shipped">Shipped</option>
+                    </select>
+                </div>
+            </div>
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead><tr><th>ID</th><th>Item</th><th>Qty</th><th>Customer</th><th>Status</th></tr></thead>
+                <tbody id="orders-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
