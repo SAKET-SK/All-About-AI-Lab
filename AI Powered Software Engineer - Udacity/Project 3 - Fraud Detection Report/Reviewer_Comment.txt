@@ -1,0 +1,15 @@
+🎉 Congratulations!
+You’ve delivered a strong and well-structured solution that reflects real-world architectural thinking.
+
+Especially strong work on:
+
+Built a clear event-driven microservices architecture
+Designed for real-time fraud detection with scalability in mind
+Included observability, resilience, and compliance considerations
+Used appropriate technologies with solid justification
+Communicated the solution clearly with helpful diagrams
+I recommend exploring these resources to further enhance your skills:
+
+Microservice Architecture Pattern(opens in a new tab)
+Best practices for implementing event-driven architectures in your organization(opens in a new tab)
+This is an excellent submission and shows great potential. you’re on track to do really well in this nano-degree. Keep pushing forward and enjoy the learning journey!
