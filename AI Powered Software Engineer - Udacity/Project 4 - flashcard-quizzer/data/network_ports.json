@@ -1,0 +1,12 @@
+{
+  "cards": [
+    {"front": "Which TCP port does HTTPS use by default?", "back": "443"},
+    {"front": "Which TCP port does HTTP use by default?", "back": "80"},
+    {"front": "Which TCP port does SSH use by default?", "back": "22"},
+    {"front": "Which port does DNS use for ordinary queries?", "back": "53"},
+    {"front": "Which TCP port does FTP use for its control connection?", "back": "21"},
+    {"front": "Which TCP port does SMTP use for server-to-server mail?", "back": "25"},
+    {"front": "Which TCP port does PostgreSQL use by default?", "back": "5432"},
+    {"front": "Which TCP port does MySQL use by default?", "back": "3306"}
+  ]
+}

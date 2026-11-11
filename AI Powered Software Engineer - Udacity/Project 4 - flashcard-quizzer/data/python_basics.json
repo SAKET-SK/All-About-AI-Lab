@@ -1,0 +1,12 @@
+{
+  "cards": [
+    {"front": "Which keyword defines a function?", "back": "def"},
+    {"front": "Which built-in function returns the length of a list?", "back": "len"},
+    {"front": "Which keyword starts a loop over the items of a sequence?", "back": "for"},
+    {"front": "What is the boolean type called?", "back": "bool"},
+    {"front": "Which keyword handles an exception raised in a try block?", "back": "except"},
+    {"front": "Which built-in function converts the string \"42\" to an integer?", "back": "int"},
+    {"front": "Which mutable built-in type stores key-value pairs?", "back": "dict"},
+    {"front": "Which keyword imports a module?", "back": "import"}
+  ]
+}

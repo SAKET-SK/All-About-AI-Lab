@@ -1,0 +1,26 @@
+# Flashcard Quizzer - quality check results
+# Run from the project root with Python 3.12.3.
+
+$ python -m pytest tests/ -q
+........................................................................ [ 95%]
+.......                                                                  [100%]
+151 passed in 0.49s
+
+$ python -m black --check .
+All done! ✨ 🍰 ✨
+15 files would be left unchanged.
+
+$ python -m isort --check-only .
+(exit code 0: imports are sorted)
+
+$ python -m flake8 .
+(exit code 0: no linting errors)
+
+$ python -m mypy .
+Success: no issues found in 15 source files
+
+$ python -m bandit -r main.py utils
+High: 0
+Medium: 0
+Total lines of code: 814
+Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 2

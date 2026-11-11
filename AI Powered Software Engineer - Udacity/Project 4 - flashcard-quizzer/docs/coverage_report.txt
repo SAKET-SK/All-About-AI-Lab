@@ -1,0 +1,43 @@
+# Test coverage report
+# Command: python -m pytest --cov=. --cov-report=html --cov-report=term-missing
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+main.py                             65      0   100%
+tests/__init__.py                    0      0   100%
+tests/conftest.py                   45      0   100%
+tests/test_cli.py                  150      0   100%
+tests/test_flashcard_loader.py      92      0   100%
+tests/test_history.py               86      0   100%
+tests/test_integration.py           65      0   100%
+tests/test_quiz_modes.py           166      0   100%
+tests/test_ui.py                   131      0   100%
+utils/__init__.py                    0      0   100%
+utils/data_loader.py                55      0   100%
+utils/history.py                    70      0   100%
+utils/models.py                     26      0   100%
+utils/quiz_engine.py               110      0   100%
+utils/ui.py                         86      0   100%
+--------------------------------------------------------------
+TOTAL                             1147      0   100%
+Coverage HTML written to dir htmlcov
+151 passed in 0.91s
+
+# Source code only (tests excluded)
+# Command: python -m pytest --cov=main --cov=utils --cov-report=term-missing
+
+Name                   Stmts   Miss  Cover   Missing
+----------------------------------------------------
+main.py                   65      0   100%
+utils/__init__.py          0      0   100%
+utils/data_loader.py      55      0   100%
+utils/history.py          70      0   100%
+utils/models.py           26      0   100%
+utils/quiz_engine.py     110      0   100%
+utils/ui.py               86      0   100%
+----------------------------------------------------
+TOTAL                    412      0   100%
+151 passed in 0.68s

@@ -1,0 +1,12 @@
+[
+  {"front": "API", "back": "Application Programming Interface"},
+  {"front": "CDN", "back": "Content Delivery Network"},
+  {"front": "CPU", "back": "Central Processing Unit"},
+  {"front": "DNS", "back": "Domain Name System"},
+  {"front": "HTTP", "back": "Hypertext Transfer Protocol"},
+  {"front": "IP", "back": "Internet Protocol"},
+  {"front": "RAM", "back": "Random Access Memory"},
+  {"front": "SSH", "back": "Secure Shell"},
+  {"front": "TLS", "back": "Transport Layer Security"},
+  {"front": "VPN", "back": "Virtual Private Network"}
+]
